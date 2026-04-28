@@ -200,8 +200,6 @@ index=security_logs error
 
 ---
 
-# 🧠 Key Idea (Very Important)
-
 Splunk works like a **pipeline**:
 
 ```
@@ -218,16 +216,5 @@ index=logs
 | sort ...
 ```
 
----
 
-# ⚠️ Reality Check
 
-- You don’t memorize *everything*
-- You master **patterns + logic**
-- 80% of real work uses:
-    - `search`
-    - `stats`
-    - `timechart`
-    - `eval`
-    - `where`
-    - `rex`
