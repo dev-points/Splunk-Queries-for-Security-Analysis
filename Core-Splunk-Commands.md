@@ -4,7 +4,7 @@ What actually helps is understanding.
 2. How they combine in patterns.
 
 
-# 🔹 Core Splunk Commands (Grouped + Meaning)
+# 🔹 Core Splunk Commands - Grouped + Meaning
 
 ## 🔍 Searching & Filtering
 
@@ -14,7 +14,7 @@ What actually helps is understanding.
 
 ---
 
-## 📊 Transforming (Aggregation)
+## 📊 Transforming - Aggregation
 
 - `stats` – Aggregate values (count, avg, sum)
 - `chart` – Create table-style charts
@@ -82,10 +82,7 @@ What actually helps is understanding.
 
 ---
 
-# 🔥 Common Command Combinations (VERY Important)
-
-This is where real power comes in.
-
+# 🔥 Common Command Combinations
 ---
 
 ## ✅ 1. Basic Filtering + Table
@@ -99,7 +96,7 @@ index=web_logs status=200
 
 ---
 
-## ✅ 2. Search + Stats (Most Common)
+## ✅ 2. Search + Stats 
 
 ```
 index=web_logs
@@ -110,7 +107,7 @@ index=web_logs
 
 ---
 
-## ✅ 3. Search + Timechart (Monitoring)
+## ✅ 3. Search + Timechart - Monitoring
 
 ```
 index=web_logs
@@ -121,7 +118,7 @@ index=web_logs
 
 ---
 
-## ✅ 4. Eval + Stats (Calculated Insights)
+## ✅ 4. Eval + Stats - Calculated Insights
 
 ```
 index=web_logs
@@ -178,7 +175,7 @@ index=logs
 
 ---
 
-## ✅ 9. Join (Correlation)
+## ✅ 9. Join 
 
 ```
 index=web_logs
