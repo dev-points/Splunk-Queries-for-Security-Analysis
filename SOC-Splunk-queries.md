@@ -7,11 +7,8 @@ index=auth_logs action=failure
 | sort -count
 ```
 
-**Meaning:**
 
-Find users/IPs with more than 5 failed login attempts.
-
-👉 **Use case:** Detect brute-force attacks
+👉 **Use case:** Detect brute-force attacks of more than 5 failed login attempts
 
 ---
 
@@ -24,11 +21,8 @@ index=network_logs
 | head 10
 ```
 
-**Meaning:**
 
-Top 10 most active IP addresses.
-
-👉 **Use case:** Identify unusual traffic sources
+👉 **Use case:** Identify Top 10 most unusual traffic sources
 
 ---
 
@@ -39,11 +33,8 @@ index=auth_logs action=success
 | timechart count by user
 ```
 
-**Meaning:**
 
-Shows login trends over time.
-
-👉 **Use case:** Spot abnormal login spikes
+👉 **Use case:** Spot abnormal login spikes over time.
 
 ---
 
@@ -54,15 +45,12 @@ index=web_logs status=403
 | stats count by src_ip, uri
 ```
 
-**Meaning:**
 
-Find who is trying to access restricted pages.
-
-👉 **Use case:** Possible reconnaissance or attack attempts
+👉 **Use case:** Possible reconnaissance or attack attempts on restricted pages
 
 ---
 
-# 📦 5. Large Data Transfer (Possible Exfiltration)
+# 📦 5. Large Data Transfer - Possible Exfiltration
 
 ```
 index=network_logs
@@ -71,11 +59,8 @@ index=network_logs
 | sort -total_bytes
 ```
 
-**Meaning:**
 
-Find IPs sending unusually large data.
-
-👉 **Use case:** Data exfiltration detection
+👉 **Use case:** Find IPs sending unusually large data.
 
 ---
 
@@ -86,11 +71,8 @@ index=auth_logs
 | rare user
 ```
 
-**Meaning:**
 
-Shows users that appear rarely.
-
-👉 **Use case:** Detect suspicious or new accounts
+👉 **Use case:** Detect suspicious or new accounts or users that appear rarely.
 
 ---
 
@@ -102,11 +84,8 @@ index=system_logs error
 | sort -count
 ```
 
-**Meaning:**
 
-Which systems are generating the most errors.
-
-👉 **Use case:** Troubleshooting or attack detection
+👉 **Use case:** Which systems are generating the most errors.
 
 ---
 
@@ -122,7 +101,7 @@ index=logs
 
 Pull IP address from raw log text.
 
-👉 **Use case:** When fields aren’t pre-extracted
+👉 **Use case:** Pull IP address from raw log text.
 
 ---
 
@@ -134,15 +113,12 @@ index=file_logs
 | stats count by user, filename
 ```
 
-**Meaning:**
 
-Track access to executable files.
-
-👉 **Use case:** Malware investigation
+👉 **Use case:** Track access to executable files like Malware.
 
 ---
 
-# 🧠 10. Combine Login + Activity (Correlation)
+# 🧠 10. Combine Login + Activity 
 
 ```
 index=auth_logs action=success
@@ -153,7 +129,7 @@ index=auth_logs action=success
 
 Match login events with user actions.
 
-👉 **Use case:** Track what users did after login
+👉 **Use case:** Match login events and track what users did after login
 
 ---
 
@@ -169,7 +145,7 @@ index=network_logs
 
 IPs generating massive traffic.
 
-👉 **Use case:** Detect flooding attacks
+👉 **Use case:** Detect IPs generating massive traffic attacks.
 
 ---
 
@@ -185,6 +161,6 @@ index=auth_logs action=failure
 
 Where failed logins are coming from.
 
-👉 **Use case:** Geo-based threat detection
+👉 **Use case:** Where failed logins are coming from.
 
 ---
